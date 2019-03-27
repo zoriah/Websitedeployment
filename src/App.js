@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 // import './App.less';
-
+import WrappedHorizontalLoginForm from "./TestForm";
 
 import { Card, Layout } from "antd";
 
@@ -11,7 +11,7 @@ const {
 } = Layout
 
 const testMenge = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9
+  1, 2, 3
 ]
 
 class App extends Component {
@@ -25,22 +25,7 @@ class App extends Component {
             className:'grid-container'
           }}
         >
-          {
-            testMenge.map((v, id) =>{ 
-              return (
-                <Card
-                  key={id}
-                  className="grid-item"
-                  title={"card "+ id}
-                  style={{
-                    width:300
-                  }}
-                >
-                 {v}
-                </Card>
-              )
-            })
-          }
+          <WrappedHorizontalLoginForm></WrappedHorizontalLoginForm>
         </Content>
       </div>
     );
